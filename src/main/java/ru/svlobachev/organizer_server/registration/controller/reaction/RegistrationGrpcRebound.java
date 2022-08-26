@@ -61,7 +61,6 @@ public class RegistrationGrpcRebound {
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
-
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), StandardCharsets.UTF_8))) {
             for (String line; (line = reader.readLine()) != null; ) {
                 newline.append(line.trim());
@@ -69,19 +68,17 @@ public class RegistrationGrpcRebound {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
         Map<String, String> myMapFromString = Splitter.on(",")
                 .withKeyValueSeparator(":")
                 .split(newline.toString());
 
 
         for (Map.Entry<String, String> entry : myMapFromString.entrySet()) {
-//            System.out.println("ID =  " + entry.getKey() + " Val = " + entry.getValue());
+
             if (entry.getKey().contains("code")) {
                 code = entry.getValue().trim();
             }
         }
-//         System.out.println(myMapFromString);
         return code;
     }
 }
