@@ -57,7 +57,7 @@ public class RegistrationGrpcRebound {
         URL url;
         try {
 //             url = new URL("https://sms.ru/code/call?phone="+phone+"&ip="+ip+"&api_id="+api_id);
-            url = new URL("file:/Users/svlobachev/IntellijProjects/organizer_server/src/main/resources/curl_test");
+            url = new URL("file:/Users/sergeilobachev/IntellijProjects/organizer_server/src/main/resources/curl_test");
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
