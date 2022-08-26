@@ -1,0 +1,9 @@
+package ru.svlobachev.grpcserver.registration.model.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import ru.svlobachev.grpcserver.registration.model.entity.CourseMaterial;
+
+@Repository
+public interface CourseMaterialRepository extends JpaRepository<CourseMaterial,Long> {
+}

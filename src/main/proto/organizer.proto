@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "organizer";
+
+package organizer;
+
+service Greeter {
+  rpc SayHello (RequestMessage) returns (ResponseMessage) {}
+}
+
+message RequestMessage {
+  //  string name = 1;
+  map<string, string> registration_box_request = 1;
+}
+
+message ResponseMessage {
+  //  string message = 1;
+  map<string, string> registration_box_response = 1;
+}

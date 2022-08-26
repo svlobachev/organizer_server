@@ -1,0 +1,15 @@
+package ru.svlobachev.grpcserver.registration.model.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import ru.svlobachev.grpcserver.registration.model.entity.Users;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface FindUserRepository extends JpaRepository<Users, Long> {
+    Optional<Users> findFirstByValue_3(String phoneNumber);
+
+}
