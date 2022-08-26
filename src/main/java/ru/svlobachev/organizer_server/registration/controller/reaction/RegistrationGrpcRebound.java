@@ -51,7 +51,7 @@ public class RegistrationGrpcRebound {
     String getPinCodeFromSmsRu(String phone) {
         phone = phone.replace("+", "");
 //        String ip = "33.22.11";
-        String api_id = "4087D96B-279F-DF31-70A3-086598810DD1";
+//        String api_id = "4087D96B-279F-DF31-70A3-086598810DD1";
         StringBuilder newline = new StringBuilder();
         String code = "";
         URL url;
